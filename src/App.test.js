@@ -18,37 +18,37 @@ configure({ adapter: new Adapter() });
 
 
 describe('hmahmud01 component load test', function(){
-	it('App OuterLayout Component Loaded', function() {
+	it('Main App Wrapper Component Loaded', function() {
 		const wrapper = shallow(<App />);
 		const comps = <OuterLayout />;
 		expect(wrapper.contains(comps)).to.equal(true);
 	});
-	it('InnerLayout Component Loaded', function() {
+	it('Inner Side of the wrapper Component Loaded', function() {
 		const wrapper = shallow(<OuterLayout />);	
 		const comps = <InnerLayout />							
 		expect(wrapper.contains(comps)).to.equal(true);
   });
-  it('Splash Component Loaded', function() {
+  it('Splash(Home Page) Component Loaded', function() {
 		const wrapper = shallow(<InnerLayout />);
 		const comps = <Splash />;
 		expect(wrapper.contains(comps)).to.equal(true);
   });
-  it('Introduction Component Loaded', function() {
+  it('Introduction(of Hasan Mahmud) Component Loaded', function() {
 		const wrapper = shallow(<InnerLayout />);
 		const comps = <Intro />;
 		expect(wrapper.contains(comps)).to.equal(true);
   });
-  it('Experience Component Loaded', function() {
+  it('Experience(Over career experience with timeline) Component Loaded', function() {
 		const wrapper = shallow(<InnerLayout />);
 		const comps = <Work />;
 		expect(wrapper.contains(comps)).to.equal(true);
   });
-  it('Skill Component Loaded', function() {
+  it('Skill(All Skill Set) Component Loaded', function() {
 		const wrapper = shallow(<InnerLayout />);
 		const comps = <Skill />;
 		expect(wrapper.contains(comps)).to.equal(true);
   });
-  it('Portfolio Component Loaded', function() {
+  it('Portfolio(works outside of the job experience) Component Loaded', function() {
 		const wrapper = shallow(<InnerLayout />);
 		const comps = <Portfolio />;
 		expect(wrapper.contains(comps)).to.equal(true);
